@@ -1,19 +1,19 @@
-{%- capture title %}Note: {{ date | date: dates.datetime_full }}{% endcapture -%}
-{%- capture target -%}{{ page.url | prepend: app.url | pretty }}{%- endcapture -%}
-{%- assign webmentions = webmentions.children | webmentions_for_url: target -%}
 {%- layout 'default' -%}
 {%- block 'main' -%}
-  {%- include 'footer' -%}
-  {%- include 'content' properties: 'e-content p-name' -%}
-  {%- if category.size > 0 -%}
-    {%- include 'categories' -%}
-  {%- endif -%}
-  {%- if webmentions.size > 0 -%}
-    {%- include 'section-remarks'
-      section_id: 'webmentions'
-      section_title: 'Webmentions'
-      items: webmentions
-      item_modifier: 'inline'
-    -%}
-  {%- endif -%}
+  {%- render 'footer'
+    date: date
+    location: location
+    geo: geo
+    in_reply_to: in_reply_to
+    canonical: canonical
+    vocab: vocab
+  -%}
+  {%- render 'content' with content
+    properties: 'e-content p-name'
+  -%}
+  {%- render 'categories' with category -%}
+  {%- render 'section-remarks' with webmentions
+    id: 'webmentions'
+    title: 'Webmentions'
+  -%}
 {%- endblock -%}

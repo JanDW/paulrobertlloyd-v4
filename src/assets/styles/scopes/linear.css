@@ -54,8 +54,8 @@
 }
 
 .s-linear blockquote li {
-  margin-inline-start: var(--flow-inset);
   list-style-position: outside;
+  margin-inline-start: var(--flow-inset);
 }
 
 .s-linear blockquote + figcaption {
@@ -73,6 +73,7 @@
   @extend %reference;
 
   inline-size: 100%;
+  max-inline-size: 100%;
 }
 
 .s-linear th,
@@ -86,6 +87,11 @@
 
 .s-linear thead th {
   @extend %overline;
+}
+
+.s-linear tbody th,
+.s-linear tbody td {
+  border-block-start: var(--border-width-thin) solid var(--color-rule);
 }
 
 .s-linear *:not([class]) + h2 {

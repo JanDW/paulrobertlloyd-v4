@@ -1,11 +1,13 @@
-{%- assign tag = page.fileSlug | prepend: 'skill:' -%}
-{%- assign items = collections.project | includes: 'data.tags',tag -%}
 {%- layout 'default' -%}
 {%- block 'main' -%}
-  {%- include 'header' -%}
-  {%- include 'items'
-    items_size: '12rem'
-    items_component: 'card'
+  {%- render 'header'
+    title: title
+    summary: summary
+  -%}
+  {%- assign items = collections.project | includes: 'data.category',title -%}
+  {%- render 'items' with items
+    grid_size: '12rem'
+    component: 'card'
     card_image_present: 'card-square'
   -%}
 {%- endblock -%}

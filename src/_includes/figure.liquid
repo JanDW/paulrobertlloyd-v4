@@ -1,12 +1,15 @@
 <figure class="align-{{ alignment | default: 'none' }}">
 {%- if content %}
-  {{ content }}
+  {{ content | markdown }}
 {%- else %}
-  {%- include 'image' with figure -%}
+  {%- render 'image' with figure
+    preset: image_preset
+    ratio: image_ratio | default: false
+  -%}
 {%- endif %}
 {%- if caption %}
   <figcaption>
-    {{ caption | markdownify }}
+    {{ caption | markdown }}
   </figcaption>
 {%- endif %}
 </figure>

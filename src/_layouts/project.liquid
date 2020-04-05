@@ -1,15 +1,14 @@
 {%- layout 'default' -%}
 {%- block 'main' -%}
-  {%- include 'header' -%}
-  {%- include 'content' -%}
-  {%- assign tag = page.fileSlug | prepend: 'project:' -%}
-  {%- assign items = collections.article | includes: 'data.tags',tag -%}
-  {%- if items.size > 0 %}
-    {%- include 'section'
-      section_id: 'related'
-      section_title: 'Related articles'
-      items: items
-      items_size: '16rem'
-    -%}
-  {%- endif -%}
+  {%- render 'header'
+    title: title
+    summary: summary
+    vocab: vocab
+  -%}
+  {%- render 'content' with content -%}
+  {%- render 'section' with related
+    id: 'related'
+    title: 'Related articles'
+    grid_size: '16rem'
+  -%}
 {%- endblock -%}

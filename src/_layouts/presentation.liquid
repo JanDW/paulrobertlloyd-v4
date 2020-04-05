@@ -1,9 +1,15 @@
 {%- layout 'default' -%}
 {%- block 'main' -%}
-  {%- include 'footer' -%}
-  {%- include 'header' -%}
+  {%- render 'footer'
+    date: date
+  -%}
+  {%- render 'header'
+    title: title
+    summary: summary
+    vocab: vocab
+  -%}
   {%- capture content -%}
-    {{ content }}
+    {{- content -}}
     {%- for slide in slides -%}
       {%- render 'figure' with slide.image
         caption: slide.notes
@@ -12,5 +18,5 @@
       -%}
     {%- endfor -%}
   {%- endcapture -%}
-  {%- include 'content' -%}
+  {%- render 'content' with content -%}
 {%- endblock -%}

@@ -1,35 +1,40 @@
-{%- assign tag = page.fileSlug | prepend: 'venue:' -%}
-{%- assign geo = page.data.geo -%}
-{%- assign items = collections.event | includes: 'data.tags',tag | reverse -%}
-{%- assign title = page.data.title -%}
 {%- layout 'default' -%}
 {%- block 'main' -%}
-  {%- include 'header' -%}
+  {%- render 'footer'
+    date: false
+    geo: page.data.geo
+  -%}
+  {%- render 'header'
+    title: title
+    url: page.data.url
+    vocab: vocab
+  -%}
   {%- capture content -%}
     <figure class="align-bleed">
       <a href="https://duckduckgo.com/?q={{ geo.latitude }},{{ geo.longitude }}&iaxm=places">
         {%- capture overlay -%}
-          pin-l+{{ app.accent_color | remove: '#' }}({{ geo.longitude }},{{ geo.latitude }})
+          pin-l+{{ app.accent_color | remove: '#' }}({{ page.data.geo.longitude }},{{ page.data.geo.latitude }})
         {%- endcapture -%}
         {%- capture position -%}
-          {{ geo.longitude }},{{ geo.latitude }},15,0.00,0.00
+          {{ page.data.geo.longitude }},{{ page.data.geo.latitude }},15,0.00,0.00
         {%- endcapture -%}
-        {% include 'map' %}
+        {%- render 'map'
+          overlay: overlay
+          position: position
+        -%}
       </a>
       <figcaption>
-        {%- include 'address' with page.data.address -%}
+        {%- render 'address' with page.data.address -%}
       </figcaption>
     </figure>
-    {{ page.data.content | markdownify }}
-    {% if page.data.former-names %}
-      <p>Formerly known as: {{ page.data.former-names | join:", " }}.</p>
-    {% endif %}
+    {{ content | markdown }}
   {%- endcapture -%}
-  {%- include 'content' -%}
-  {%- include 'section'
-    section_id: 'events'
-    section_title: 'Events at this venue'
-    items: items
+  {%- render 'content' with content -%}
+  {%- assign events = collections.event | includes: 'data.venue',page.fileSlug | reverse -%}
+  {%- render 'section' with events
+    id: 'events'
+    title: 'Other events at this venue'
     item_modifier: 'inline'
+    hide_summary: true
   -%}
 {%- endblock -%}

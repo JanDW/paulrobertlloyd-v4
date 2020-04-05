@@ -1,11 +1,19 @@
 ---
-layout: archive-month
+layout: index
+title: Archive
 pagination:
-  data: archive.months
+  data: months
   size: 1
-  alias: date
+  alias: page
   addAllPagesToCollections: true
-permalink: "{{ date | date: '%Y/%m' }}/"
+permalink: "{{ page.url }}"
 changefreq: monthly
 priority: 0.2
+eleventyComputed:
+  introduction: "{{ page.data.title }}"
 ---
+{%- assign items = collections.post | includes: 'data.date',page.data.date -%}
+{%- render 'items' with items
+  item_modifier: 'inline'
+  no_items_content: 'Nothing was published during this month.'
+-%}

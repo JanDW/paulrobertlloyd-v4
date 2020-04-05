@@ -3,10 +3,10 @@ title: Apture
 date: 2009-05-22
 summary: Designing a powerful publishing tool for the web’s content creators.
 image: /images/projects/apture/image.jpg
-tags:
-- skill:brand_identity
-- skill:frontend_development
-- skill:interaction_design
+category:
+- Brand identity
+- Front-end development
+- Interaction design
 style:
   color-accent: '#05f'
   screenshot-shadow: '#0a0b0d'
@@ -37,7 +37,8 @@ Working alongside Apture’s CEO Tristan Harris and his small team, often on-sit
   caption: 'The Apture logo.'
 %}
 
-{% render 'quote' with 'I’ve worked alongside some of the most brilliant interaction and graphic designers in the world in my career, but Paul is one of the most talented and consistently impressive designers I’ve met. Beyond driving most of Apture’s graphic, interaction and web design work, he cares deeply about building beautiful, visually organised products, which I think is why we both got along in the first place.'
+{% render 'figure'
+  content: '> I’ve worked alongside some of the most brilliant interaction and graphic designers in the world in my career, but Paul is one of the most talented and consistently impressive designers I’ve met. Beyond driving most of Apture’s graphic, interaction and web design work, he cares deeply about building beautiful, visually organised products, which I think is why we both got along in the first place.'
   caption: 'Tristan Harris, co-founder and CEO'
 %}
 

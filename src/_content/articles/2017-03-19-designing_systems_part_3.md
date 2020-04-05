@@ -8,9 +8,9 @@ summary: The final part of my three-part essay based on the talk I gave at Smash
 collection: designing_systems
 image: /images/2017/03/designing_systems_part_3/brasilia_motifs.jpg
 category:
-- web
-- design
-- design Systems
+- Design
+- Design systems
+- Web
 ---
 {% render 'figure' with '/images/2017/03/designing_systems_part_3/brasilia_motifs.jpg'
   caption: 'Common architectural motifs can be seen across many of Brasília’s civic buildings.'
@@ -30,7 +30,8 @@ This use of repeating patterns is similar to the way we now build for the web. B
 
 Much like a design system, we can consider a front-end component as being made up of separate layers, or concerns.
 
-{% render 'quote' with 'I’ve found that thinking about my design as existing in broad experience tiers — in layers — is one of the best ways of designing for the modern web.'
+{% render 'figure'
+  content: '> I’ve found that thinking about my design as existing in broad experience tiers — in layers — is one of the best ways of designing for the modern web.'
   caption: '[Ethan Marcotte](https://24ways.org/2015/putting-my-patterns-through-their-paces/)'
 %}
 

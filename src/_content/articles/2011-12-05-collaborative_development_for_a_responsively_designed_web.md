@@ -5,8 +5,8 @@ canonical:
   url: https://24ways.org/2011/collaborative-development-for-a-responsively-designed-web/
 summary: I unfurl my seraph wings to proclaim peace on Earth and the importance of goodwill between designers and developers. It’s not the office Secret Santa that unites them, but constant contact and shared appreciation of different skills.
 category:
-- responsive_design
-- web
+- Responsive design
+- Web
 tags:
 - source:24_ways
 ---
@@ -28,7 +28,8 @@ Regardless of the exact process, it’s clear that the relationship between our 
 
 So how can we improve this relationship? Ultimately, we’ll need to adapt, but even within existing workflows we can start to overlap. Simply adjusting our attitude can effect change, and bring design and development teams closer together.
 
-{% render 'quote' with 'Good design is constant contact.'
+{% render 'figure'
+  content: '> Good design is constant contact.'
   caption: '[Mark Otto](http://markdotto.com/2011/09/20/good-design-is-constant-contact/)'
 %}
 
@@ -46,7 +47,8 @@ It’s from collaboration like this that I’ve become fond of producing visual 
 
 Despite the amount of research and design produced, when it comes to the crunch, there will always be a need for compromise. As the old saying goes, “fast, cheap and good — pick two.” It’s important that you know which pieces are crucial to a design and which areas can allow for movement. Pick your battles wisely. Having an agreed set of design principles can be useful when making such decisions, as they help everyone focus on the goals of the project.
 
-{% render 'quote' with 'The best compromises are reached when both sides understand the issues of the other.'
+{% render 'figure'
+  content: '> The best compromises are reached when both sides understand the issues of the other.'
   caption: '[Richard Rutter](http://clagnut.com/blog/2315/)'
 %}
 

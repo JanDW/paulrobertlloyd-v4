@@ -6,9 +6,9 @@ canonical:
 summary: 'When every device begs to be connected, it has become easier — almost necessary — to accept the adaptable nature of the web. Responsive web design is an emerging best practice, and our layouts are becoming more flexible. But often, innovation is focused on technical implementations while the visual aesthetic remains ignored. To put it another way, we’re embracing “responsive” but neglecting the second part: “design.” Now is the time to seek out an aesthetic that is truer to the medium.'
 image: /images/2012/09/the_web_aesthetic/illustration.png
 category:
-- responsive_design
-- web
-- design
+- Responsive design
+- Web
+- Design
 tags:
 - source:a_list_apart
 photoset:
@@ -41,7 +41,8 @@ _This article is [also available in Italian][it-IT]{hreflang="it-IT" rel="altern
   image_ratio: 2.25
 %}
 
-{% render 'quote' with 'It is the nature of the web to be flexible, and it should be our role as designers and developers to embrace this flexibility, and produce pages which, by being flexible, are accessible to all.'
+{% render 'figure'
+  content: '> It is the nature of the web to be flexible, and it should be our role as designers and developers to embrace this flexibility, and produce pages which, by being flexible, are accessible to all.'
   caption: 'John Allsopp, <cite>[The Dao of Web Design](https://www.alistapart.com/articles/dao/)</cite>'
 %}
 

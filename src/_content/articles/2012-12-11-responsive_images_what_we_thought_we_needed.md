@@ -5,8 +5,8 @@ canonical:
   url: https://24ways.org/2012/responsive-images-what-we-thought-we-needed/
 summary: I engage with the two main approaches to the matter of responsive images and finds them wanting. Could “Bah, humbug!” be a reasonable response to markup excess?
 category:
-- responsive_design
-- web
+- Responsive design
+- Web
 tags:
 - source:24_ways
 ---
@@ -34,7 +34,8 @@ A second proposal put forward by Apple, the [`srcset` attribute][6], uses a more
 
 ## Enter Scrooge
 
-{% render 'quote' with 'Men’s courses will foreshadow certain ends, to which, if persevered in, they must lead.'
+{% render 'figure'
+  content: '> Men’s courses will foreshadow certain ends, to which, if persevered in, they must lead.'
   caption: '<cite>Ebenezer Scrooge</cite>'
 %}
 

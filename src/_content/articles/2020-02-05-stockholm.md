@@ -8,17 +8,18 @@ summary: Cloudy with a chance of meatballs.
 image: /images/2020/02/stockholm/gamla_stan.jpg
 collection: scandinavian_sojourn
 category:
-- stockholm
-- sweden
-- europe
-- travel
-- railways
+- Stockholm
+- Sweden
+- Europe
+- Travel
+- Railways
 tags:
 - featured
 ---
-{%- capture overlay %}geojson({{ geojson | jsonify | escape }}){% endcapture -%}
+{%- capture overlay %}geojson({{ geojson | json | escape }}){% endcapture -%}
 {%- capture map -%}
-{%- include 'map'
+{%- render 'map'
+  overlay: overlay
   width: 360
   height: 360
 -%}
@@ -86,6 +87,7 @@ One idea behind this trip was to be in Europe as Britain left it, but I’m at a
 Having embraced one Swedish stereotype, I decide to go all in. At [Nomad][23], I order the meatballs (washed down with the very delightful *A Ship Full of IPA*). The day has been saved! Now all I need to do is fall asleep before the clock strikes midnight.
 
 ## Day 9
+
 Blue skies! There’s probably a Brexit metaphor in this somewhere, but I prefer not to dwell on it. I’ve returned to *Gast*{lang="sv"}, but have no intention of hanging around this time. I need to reserve my seat on the later train to Gothenburg (where I’ll get the connecting train to Oslo) and a walk to the train station – before returning later in the afternoon – is just the excuse I need to quickly get some half-decent photos of a city.
 
 Stockholm’s true complexion is finally revealed. I’ve not seen this city in its best light, and suspect it may be a long time before I do.

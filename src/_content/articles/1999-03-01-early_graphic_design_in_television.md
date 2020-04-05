@@ -3,10 +3,10 @@ title: Early Graphic Design in Television
 date: 1999-03-01
 summary: The launch of television in 1936 saw the birth of a medium that could be easily exploited and enhanced by graphic design. However the early story of graphic design in television was one of limited resources and under investment.
 category:
-- design
-- television
+- Design
+- Television
 tags:
-- source:academic_essay
+- source:academic_essays
 figures:
   1:
   - url: /images/1999/03/early_graphic_design_in_television/1a.png
@@ -63,7 +63,8 @@ The increase of license holders required a greater range of programming but it a
 
 Graphic design’s link with television however, began well before its launch in 1936:
 
-{% render 'quote' with 'Contemporary descriptions of Baird’s 1926 experiments with television broadcasts reveal that he used a variety of graphic forms to test legibility, including type script. Graphics and television were thus linked from the point of inception.'
+{% render 'figure'
+  content: '> Contemporary descriptions of Baird’s 1926 experiments with television broadcasts reveal that he used a variety of graphic forms to test legibility, including type script. Graphics and television were thus linked from the point of inception.'
   caption: 'Crook, 1986'
 %}
 
@@ -107,7 +108,8 @@ It was Saul Bass though, who was to have the most influence on designers in the 
 
 His work on titles began almost by accident when working on an advertising campaign with the filmmaker Otto Preminger. Bass was designing a graphic symbol of a flame and a rose when he and Preminger came up with the idea of putting this image at the beginning of the film and animating it. Bass did this, adding credits to run over it, and from that moment on, Saul Bass became a title designer. He then went on to produce the titles for Preminger’s film <cite>The Man with the Golden Arm</cite> in which:
 
-{% render 'quote' with 'Bass used abstract shapes to portray the disjointed and unhappy life of an addict.'
+{% render 'figure'
+  content: '> Bass used abstract shapes to portray the disjointed and unhappy life of an addict.'
   caption: 'Montagu 1991: 5'
 %}
 

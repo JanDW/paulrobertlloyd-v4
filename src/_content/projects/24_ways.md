@@ -3,11 +3,12 @@ title: 24 ways
 date: 2013-12-01
 summary: Award-winning redesign for popular web geek advent calendar.
 image: /images/projects/24_ways/image.jpg
+category:
+- Brand identity
+- Front-end development
+- Interaction design
 tags:
 - featured
-- skill:brand_identity
-- skill:frontend_development
-- skill:interaction_design
 style:
   color-accent: '#f04'
   screenshot-shadow: '#b01'
@@ -48,7 +49,8 @@ Each December, Drew McLellan and his small team of elves publish [24 ways][1], a
 
 The previous website, designed by Tim Van Damme in 2007, pushed the limits of the medium but six years later, and with an accumulated archive of hundreds of articles, it was beginning to fray at the edges. Aesthetically a bit tired, the site also failed to reflect the best practice its authors were now advocating such as advanced web typography, accessible design and the latest CSS techniques. The layout was responsive (thanks to some retrospective hacking) but a fresh approach was needed to effectively deliver content to the broadening range of devices accessing the site.
 
-{% render 'quote' with 'I’m in the fortunate position of knowing lots of really great web designers – many of whom have been authors for 24 ways over the years. I figured I’d start with my top-choice dream person, and work down the list until I found someone who’d be prepared to do it. So I started by asking Paul Robert Lloyd, and he said yes.'
+{% render 'figure'
+  content: '> I’m in the fortunate position of knowing lots of really great web designers – many of whom have been authors for 24 ways over the years. I figured I’d start with my top-choice dream person, and work down the list until I found someone who’d be prepared to do it. So I started by asking Paul Robert Lloyd, and he said yes.'
   caption: '[Drew McLellan on rebuilding 24 ways](https://allinthehead.com/retro/366/rebuilding-24-ways)'
 %}
 

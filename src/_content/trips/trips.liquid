@@ -1,0 +1,36 @@
+---
+layout: index
+title: Trips
+permalink: trips/
+eleventyComputed:
+  introduction: Over the course of {{ total.trips }} trips, I’ve travelled {{ total.distance }} km and emitted approximately {{ total.co2 }} kg of CO<sub>2</sub>.
+---
+{%- capture content -%}
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Trip</th>
+      <th>Distance (<abbr title="kilometers">km</abbr>)</th>
+      <th>CO<sub>2</sub> (<abbr title="kilograms">kg</abbr>)</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%- for trip in trips -%}
+    <tr>
+      <th>
+        <time datetime="{{ trip.date }}">{{ trip.date | date: dates.date_short }}</time>
+      </th>
+      <td>
+        {% for stop in trip.stops %}
+          {% unless forloop.first %}&#9992; {% endunless %}{{ stop.city }}, {{ stop.country }}<br>
+        {% endfor %}
+      </td>
+      <td>{{ trip.distance }}</td>
+      <td>{{ trip.co2 }}</td>
+    </tr>
+  {%- endfor -%}
+  </tbody>
+</table>
+{%- endcapture -%}
+{%- render 'content' with content -%}

@@ -1,11 +1,28 @@
 ---
-layout: archive-year
+layout: index
+title: Archive
 pagination:
-  data: archive.years
+  data: years
   size: 1
-  alias: year
+  alias: page
   addAllPagesToCollections: true
-permalink: "{{ year }}/index.html"
+permalink: "{{ page.url }}"
 changefreq: monthly
 priority: 0.2
+eleventyComputed:
+  introduction: "{{ page.data.title }}"
 ---
+{%- assign archive = months | includes: 'date',page.fileSlug -%}
+{%- render 'section-archives' with archive
+  id: 'browse',
+  title: 'Browse by month'
+-%}
+{%- assign featured = collections.article | includes: 'data.tags','featured' | includes: 'data.date',page.fileSlug -%}
+{%- render 'section' with featured
+  id: 'featured'
+  title: 'Select articles from this year'
+  scrollable: true
+  items_limit: 3
+  grid_size: '16rem'
+  component: 'card'
+-%}

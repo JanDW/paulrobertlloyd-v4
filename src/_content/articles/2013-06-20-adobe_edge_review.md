@@ -24,12 +24,12 @@ product:
     Supports
     : Windows 7 or 8, OS X 10.7 or 10.8
 category:
-- review
-- software
+- Review
+- Software
 tags:
 - source:digital_arts
 ---
-{% render 'product' %}
+{% render 'product' with product %}
 
 The proliferation of mobile devices has resulted in a reassessment of how we craft online experiences. Where once safe defaults could be assumed, we now see the web as the unpredictable beast it has always been. Our processes are adapting to meet this demand. Cross-disciplinary roles, agile teams and a high degree of collaboration are important tenets of a responsive workflow — with the boundary between design and development increasingly blurred.
 

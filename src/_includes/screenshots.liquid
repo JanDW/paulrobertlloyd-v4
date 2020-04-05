@@ -1,14 +1,14 @@
 <figure class="align-{{ alignment | default: 'none' }}">
   <div class="screenshots" style="--columns: {{ columns | default: screenshots.size }}">
-  {%- for screenshot in screenshots -%}
-    {%- include 'image' with screenshot.url
-      alt: screenshot.alt
+  {%- for item in screenshots -%}
+    {%- render 'image' with item.url
+      alt: item.alt
     -%}
   {%- endfor -%}
   </div>
-{%- if caption -%}
+{%- if caption %}
   <figcaption>
-    {{ caption | markdownify }}
+    {{ caption | markdown }}
   </figcaption>
-{%- endif -%}
+{%- endif %}
 </figure>

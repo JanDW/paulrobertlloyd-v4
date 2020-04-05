@@ -2,15 +2,15 @@
 title: Look Around You
 date: 2019-02-05T14:35:00Z
 canonical:
-  source: new_adventures_magazine
-  edition: 2019
+  url: https://newadventuresconf.com/articles/look-around-you
 summary: For all their claims of changing the world, it would seem designers have not only failed to address its more pressing problems, but exaggerated many of its existing ones.
 image: /images/2019/02/illustration.png
 category:
-- design
-- technology
+- Design
+- Technology
 tags:
 - featured
+- source:new_adventures_magazine
 ---
 {% render 'figure' with '/images/2019/02/illustration.png'
   caption: 'Illustration: [Geri Coady](http://hellogeri.com)'

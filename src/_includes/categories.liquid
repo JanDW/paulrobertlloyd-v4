@@ -1,3 +1,7 @@
-<p class="categories">{% for item in category %}
-  <a class="p-category" href="https://twitter.com/hashtag/{{ item }}">#{{ item }}</a>
-{% endfor %}</p>
+{%- if categories.size > 0 -%}
+  <ul class="categories">
+  {%- for category in categories %}
+    <li><a class="p-category" href="/categories/{{ category | slug }}" rel="tag" aria-label="{{ category }}">{{ category | hashtag }}</a></li>
+  {%- endfor -%}
+  </ul>
+{%- endif -%}

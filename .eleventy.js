@@ -9,18 +9,16 @@ module.exports = function (eleventy) {
   eleventy.setLibrary('md', require('./lib/libraries/markdown.js'));
 
   // Filters
-  eleventy.addFilter('colorify', require('./lib/filters/colorify.js'));
-  eleventy.addFilter('contrastify', require('./lib/filters/contrastify.js'));
+  eleventy.addFilter('color', require('./lib/filters/color.js'));
+  eleventy.addFilter('contrast_with', require('./lib/filters/contrast-with.js'));
+  eleventy.addFilter('excludes', require('./lib/filters/excludes.js'));
+  eleventy.addFilter('hashtag', require('./lib/filters/hashtag.js'));
   eleventy.addFilter('hostname', require('./lib/filters/hostname.js'));
   eleventy.addFilter('includes', require('./lib/filters/includes.js'));
-  eleventy.addFilter('jsonify', require('./lib/filters/jsonify.js'));
-  eleventy.addFilter('markdownify', require('./lib/filters/markdownify.js'));
-  eleventy.addFilter('pretty', require('./lib/filters/pretty.js'));
-  eleventy.addFilter('related', require('./lib/filters/related.js'));
-  eleventy.addFilter('sort_by', require('./lib/filters/sort-by.js'));
+  eleventy.addFilter('markdown', require('./lib/filters/markdown.js'));
+  eleventy.addFilter('slug', require('./lib/filters/slug.js'));
   eleventy.addFilter('strip_mentions', require('./lib/filters/strip-mentions.js'));
   eleventy.addFilter('tokenize', require('./lib/filters/tokenize.js'));
-  eleventy.addFilter('webmentions_for_url', require('./lib/filters/webmentions-for-url.js'));
 
   // Plugins
   eleventy.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'));
@@ -31,7 +29,6 @@ module.exports = function (eleventy) {
   eleventy.addCollection('category', require('./lib/collections/category.js'));
   eleventy.addCollection('photo', require('./lib/collections/photo.js'));
   eleventy.addCollection('post', require('./lib/collections/post.js'));
-  eleventy.addCollection('sitemap', require('./lib/collections/sitemap.js'));
 
   // Passthrough
   eleventy.addPassthroughCopy('./src/key.txt');

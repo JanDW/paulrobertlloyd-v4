@@ -1,0 +1,13 @@
+<article class="card | h-entry">
+  <a class="card__image | u-url" rel="bookmark" href="{{ item.url }}">
+    {%- render 'image' with item.data.photo[0].url
+      alt: item.data.photo[0].alt
+      class: 'u-photo'
+      ratio: 1.0
+      sizes: grid_size
+    -%}
+    {%- if item.data.photo.size > 1 -%}
+      <span class="card__icon" aria-label="{{ item.data.photo.size }} photos in this post"></span>
+    {%- endif -%}
+  </a>
+</article>

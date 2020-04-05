@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 permalink: /serviceworker.js
 ---
 const version = '@{{ 'now' | date: '%s' }}';
@@ -25,7 +26,7 @@ const offlinePage = '/offline.html';
 const offlinePages = [
 {%- assign saved = collections.article | reverse -%}
 {%- for item in saved limit: 6 -%}
-  '{{ item.url | pretty }}',
+  '{{ item.url }}',
 {%- endfor -%}
 {%- for item in navigation.primary -%}
   '{{ item.url }}',
